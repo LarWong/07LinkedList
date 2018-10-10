@@ -5,8 +5,9 @@
 
 int main(){
     struct node * front = NULL;
-    printf("Initial list: %p\n", front);
-    printf("Adding 0-9:\n");
+    printf("Initial list: \n");
+    print_list(front);
+    printf("Adding 0-9...\n");
     for (int i = 0; i < 10; i++){
         front = insert_front(front,i);
     }
@@ -15,6 +16,6 @@ int main(){
     printf("Freeing list...\n");
     front = free_list(front);
     printf("New list:\n");
-    printf("%p\n",front);
+    print_list(front);
     return 0;
 }
